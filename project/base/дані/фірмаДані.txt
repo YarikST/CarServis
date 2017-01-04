@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Фірма</element>
+    <element>Назва,Місто,Х,У,Графік ,id_Список_Робітників,Власник</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>"Назва3","Місто1",48.304576,24.565136,"Графік4",1,"Власник2"</element>
+    </par>
+    <par>
+      <element>"Назва1","Місто2",49.304576,23.565136,"Графік1",1,"Власник1"</element>
+    </par>
+  </parameter>
+</root>

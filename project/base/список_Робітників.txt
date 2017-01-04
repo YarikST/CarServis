@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Список_Робітників</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>id_Список_Робітників integer not null auto_increment,id_Робітника integer not null,id_Фірми integer not null, primary key(id_Список_Робітників)</element>
+    </par>
+  </parameter>
+</root>

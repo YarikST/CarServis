@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Замовлення</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>id_Замовлення integer not null auto_increment,id_фірми integer not null,id_замовника integer not null,id_послуги integer not null,Дата_час timestamp not null,Опис varchar(128) not null,id_відгука integer, primary key(id_Замовлення)</element>
+    </par>
+  </parameter>
+</root>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Список_Робітників</element>
+    <element>id_Робітника,id_Фірми</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>2,1</element>
+    </par>
+    <par>
+      <element>1,1</element>
+    </par>
+    <par>
+      <element>1,2</element>
+    </par>
+  </parameter>
+</root>

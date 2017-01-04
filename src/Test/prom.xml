@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="false" xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="fileRoot" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="/var/lib/tomcat7/webapps/WEB-INF/log/log.txt"/>
+        <param name="MaxFileSize" value="100MB"/>
+        <param name="MaxBackupIndex" value="2"/>
+        <param name="Encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%-30d{DATE}][%-5L][%-10M][%p][%-30.30m][%-10.20t]%n" />
+        </layout>
+    </appender>
+
+    <appender name="fileServletSQL" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="/var/lib/tomcat7/webapps/WEB-INF/log/servletSQLLog.txt"/>
+        <param name="MaxFileSize" value="100MB"/>
+        <param name="MaxBackupIndex" value="2"/>
+        <param name="Encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%-30d{DATE}][%-5L][%-10M][%p][%-30.30m][%-10.20t]%n" />
+        </layout>
+    </appender>
+
+
+    <logger name="testLoger">
+        <level value="INFO"/>
+        <appender-ref ref="fileServletSQL"/>
+    </logger>
+
+    <root>
+        <priority value="TRACE"/>
+        <appender-ref ref="fileRoot" />
+    </root>
+
+</log4j:configuration>

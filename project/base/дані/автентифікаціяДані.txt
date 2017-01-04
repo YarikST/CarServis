@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Автентифікація</element>
+    <element>id_Машини,Email,Password</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>2,"email2","pass2"</element>
+    </par>
+    <par>
+      <element>1,"email1","pass1"</element>
+    </par>
+  </parameter>
+</root>

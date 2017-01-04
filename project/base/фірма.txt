@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Фірма</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>id_Фірма integer not null auto_increment,Назва varchar(20) not null,Місто varchar(20) not null,Х float(11,8) not null,У float(11,8) not null,Графік varchar(128) not null,id_Список_Робітників integer not null,Власник varchar(15) not null, primary key(id_Фірма)</element>
+    </par>
+  </parameter>
+</root>

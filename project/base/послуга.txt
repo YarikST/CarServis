@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Послуга</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>id_Послуга integer not null auto_increment,Послуга varchar(35), Ціна float not null, Час_Роботи time not null, primary key(id_Послуга)</element>
+    </par>
+  </parameter>
+</root>

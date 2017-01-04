@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Список_Замовлень</element>
+    <element>id_Робітника,id_Замовлення,Статус</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>1,1,"статус1"</element>
+    </par>
+    <par>
+      <element>2,2,"статус2"</element>
+    </par>
+  </parameter>
+</root>

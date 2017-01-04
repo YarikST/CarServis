@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Робітник</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>id_Робітник integer not null auto_increment,ПІП varchar(30) not null,Освіта varchar(10) not null,id_Фірми integer not null,primary key(id_Робітник)</element>
+    </par>
+  </parameter>
+</root>

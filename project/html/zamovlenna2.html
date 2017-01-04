@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content="sto, avto, fast remont" />
+	<meta name="description" content="Цей сайт являється тестовим" />
+
+	<link rel="stylesheet" type="text/css" href="C:\Users\Rudy\Desktop\www\css\style.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="C:\Users\Rudy\Desktop\www\img\favicon.ico" />
+	<title>Автомобілі, Автоновини, Автоогляди.</title>
+<style>
+		@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	/*outline: none; /* Без обводки */
+}
+
+html {height: 100%}
+/* Menu */
+
+    @import url(http://fonts.googleapis.com/css?family=Roboto:300);
+    *{
+      margin: 0; padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    .cm-e-menu {
+        background-color: #ffffff; /* Колір рамки меню */
+        position: relative;
+        z-index: 1000;
+        color: #fff;
+        font-weight: 200;
+        box-shadow: 0 0 10px black;
+        }
+    .cm-e-menu ul {
+        margin: 0; padding: 0;
+    }
+    .cm-e-menu li {
+        position: relative;
+        white-space: nowrap;
+        cursor: pointer;
+        text-transform: capitalize !important;
+        list-style: none;
+
+        -webkit-transition: background-color ease-in 300ms;
+        -moz-transition: background-color ease-in 300ms;
+        -ms-transition: background-color ease-in 300ms;
+        -o-transition: background-color ease-in 300ms;
+        transition: background-color ease-in 300ms;
+    }
+    .cm-e-menu li:hover {
+        background-color: #5cbdaa; /* Колір при наведенні на елемент меню */
+        text-shadow: 0 10px 10px #222;
+    }
+    .cm-e-menu ul li.topmenu {
+        display: inline-table;
+        padding: .3em 1em;
+    }
+    .cm-e-menu .topmenu ul {
+        display:none;
+        position: absolute;
+        background-color: #222;
+    }
+    .cm-e-menu li:hover > ul {
+        display: table;
+    }
+    .cm-e-menu ul.submenu {
+        top: 100%; left: 0;
+        padding-top: .5em;
+        padding-bottom: .5em;	
+        box-shadow: 0 0 10px black;
+    }
+    .cm-e-menu ul.submenu .submenu {
+        top: -.5em; left: 100%;
+        font-size: 1em
+    }
+    .cm-e-menu ul.submenu li {
+        padding: .2em 1.5em;
+        font-size: .9rem;
+    }
+    .cm-e-menu li.divider {
+        padding: 0;
+        border-top: 1px solid #343434;
+        margin: .5rem auto .3rem;
+        cursor: default;
+    }
+    .cm-e-menu li.divider:hover {
+        background-color: transparent;
+    }
+    ul, li {
+
+    }
+
+/* Body */
+body {
+	background-color: #5cbdaa;
+	width: 100%;
+	height: 100%
+	color: #333;
+	font-size: 1em;
+	font-family: 'Roboto', Interstate;
+	line-height: 135%;
+}
+
+a {
+	color: #000000; /* Вказуємо колір посилання */
+	text-decoration: none;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+a:hover {
+	color: #ffffff; /* Вказуємо колір при наведенні на посилання */
+	text-decoration: none;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+a:active {color: #8ce4a6} /* Вказуємо колір при переходженні на посилання */
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+
+hr {
+	display: block;
+	border: 0;
+	height: 1px;
+	border-top: 1px solid #ccc;
+	padding: 0;
+}
+
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+
+/* Стилі для футера */
+
+    footer {
+        color: white;
+        padding: 1%;
+        /*border-top: 2px solid silver;*/
+        margin-top: 20px;
+        padding-bottom: 2%;
+                position: absolute;
+        bottom: 10px;
+    }
+
+footer img {width: 5%; float: left; margin-left: 5px;}
+
+#page-wrap:after {
+	content: "";
+	display: block;
+}
+
+footer, #page-wrap:after {height: 10px}
+
+#page-wrap {
+	min-height: 94%;
+	margin-bottom: -10px;
+}
+
+ul#list li {
+	padding-left: 5px;
+	display: inline-block; /* Розташувати пункти меню горизонтально */
+}
+
+/* Стилі для даних про замовлення */
+
+#model {
+    padding: 3px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+	width: 100px;
+}
+
+#year {
+    padding: 3px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+	width: 100px;
+}
+
+#turnover {
+    padding: 3px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+	width: 100px;
+}
+
+#run {
+    padding: 3px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+	width: 100px;
+}
+
+#transmision {
+    padding: 3px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+	width: 100px;
+}
+
+#fuel {
+    padding: 3px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+	width: 100px;
+}
+
+#problem {
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+
+
+}
+
+#buttonSend {
+    background: -moz-linear-gradient(#D0ECF4, #5BC9E1, #D0ECF4);
+    background: -webkit-gradient(linear, 0 0, 0  100%, from(#D0ECF4), to(#D0ECF4), color-stop(0.5, #5BC9E1));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+    padding: 3px 7px;
+    color: #333;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    margin-top: 5px;
+    cursor: pointer;
+  } 
+
+#dataorder {
+	margin-top: 25px;
+	margin-left: 100px;
+}
+
+#letters {
+	margin-top: 10px;
+	margin-left: 100px;
+	margin-bottom: 5px;
+}
+
+    /* Particles JS */
+
+        body, html{
+            padding: 0;
+            margin: 0;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+    }
+
+        #page-wrap {
+            position: relative;
+            z-index: 2;
+    }
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9y0bYufZbI6N_8DRGlZVvQAPCG0UZe9I">
+    </script>
+<script>
+/**
+ * Cookie plugin
+ *
+ * Copyright (c) 2006 Klaus Hartl (stilbuero.de)
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ */
+
+/**
+ * Create a cookie with the given name and value and other optional parameters.
+ *
+ * @example $.cookie('the_cookie', 'the_value');
+ * @desc Set the value of a cookie.
+ * @example $.cookie('the_cookie', 'the_value', { expires: 7, path: '/', domain: 'jquery.com', secure: true });
+ * @desc Create a cookie with all available options.
+ * @example $.cookie('the_cookie', 'the_value');
+ * @desc Create a session cookie.
+ * @example $.cookie('the_cookie', null);
+ * @desc Delete a cookie by passing null as value. Keep in mind that you have to use the same path and domain
+ *       used when the cookie was set.
+ *
+ * @param String name The name of the cookie.
+ * @param String value The value of the cookie.
+ * @param Object options An object literal containing key/value pairs to provide optional cookie attributes.
+ * @option Number|Date expires Either an integer specifying the expiration date from now on in days or a Date object.
+ *                             If a negative value is specified (e.g. a date in the past), the cookie will be deleted.
+ *                             If set to null or omitted, the cookie will be a session cookie and will not be retained
+ *                             when the the browser exits.
+ * @option String path The value of the path atribute of the cookie (default: path of page that created the cookie).
+ * @option String domain The value of the domain attribute of the cookie (default: domain of page that created the cookie).
+ * @option Boolean secure If true, the secure attribute of the cookie will be set and the cookie transmission will
+ *                        require a secure protocol (like HTTPS).
+ * @type undefined
+ *
+ * @name $.cookie
+ * @cat Plugins/Cookie
+ * @author Klaus Hartl/klaus.hartl@stilbuero.de
+ */
+
+/**
+ * Get the value of a cookie with the given name.
+ *
+ * @example $.cookie('the_cookie');
+ * @desc Get the value of a cookie.
+ *
+ * @param String name The name of the cookie.
+ * @return The value of the cookie.
+ * @type String
+ *
+ * @name $.cookie
+ * @cat Plugins/Cookie
+ * @author Klaus Hartl/klaus.hartl@stilbuero.de
+ */
+jQuery.cookie = function(name, value, options) {
+    if (typeof value != 'undefined') { // name and value given, set cookie
+        options = options || {};
+        if (value === null) {
+            value = '';
+            options.expires = -1;
+        }
+        var expires = '';
+        if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+            var date;
+            if (typeof options.expires == 'number') {
+                date = new Date();
+                date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+            } else {
+                date = options.expires;
+            }
+            expires = '; expires=' + date.toUTCString(); // use expires attribute, max-age is not supported by IE
+        }
+        // CAUTION: Needed to parenthesize options.path and options.domain
+        // in the following expressions, otherwise they evaluate to undefined
+        // in the packed version for some reason...
+        var path = options.path ? '; path=' + (options.path) : '';
+        var domain = options.domain ? '; domain=' + (options.domain) : '';
+        var secure = options.secure ? '; secure' : '';
+        document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+    } else { // only name given, get cookie
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+};
+</script>
+<script>
+var id_Zamobnuka='';
+var id_Zamovlenna='';
+$(document).ready(function(){
+$("#button").click(function(){
+$.cookie('form2', $("#form").serializeArray());
+
+baseZamovnuk();
+ id_Zamobnuka=getId_Zamobnuka();
+baseZamovlenna();
+id_Zamovlenna=getId_Zamovlenna();
+alert("Ваше афді замовлення "+id_Zamovlenna );
+history();
+qery();
+
+});
+
+function history(){
+var pass = $.cookie('pass');
+if(pass!=null){
+
+$.ajax({
+  url:"http://localhost:8080/project/SQL",
+data:"method=getTable&arg=id_автентифікації&arg=Автентифікація&arg=Email=\""+$.cookie('email')+"\""+" AND "+"Password=\""+pass+"\"",
+   async:true,
+success: function(data) {
+$.ajax({
+  url:"http://localhost:8080/project/SQL",
+data:"method=setTable&arg=Історія&arg=id_автентифікації,id_Машини&arg="+data[0].id_автентифікації+","+$.cookie('id_Mashunu'),
+   async:false
+});
+
+  }
+});
+
+}
+}
+
+function qery(){
+
+$.ajax({
+  url:"http://localhost:8080/project/SQL",
+data:"method=setTable&arg=Черга&arg=id_Фірми,id_Замовлення&arg="+$.cookie('idFirm')+","+id_Zamovlenna,
+   async:true
+});
+
+}
+
+function baseZamovlenna(){
+var obj=JSON.parse($.cookie('form1'));
+$.ajax({
+  url:"http://localhost:8080/project/SQL",
+data:"method=setTable&arg=Замовлення&arg=id_фірми,id_замовника,id_послуги,Дата_час,Опис&arg="+$.cookie('idFirm')+","+id_Zamobnuka+","+obj[1].value+","+"\""+obj[2].value+"\""+","+"\""+$("#problem").val()+"\"",
+   async:false
+});
+}
+
+function baseZamovnuk(){
+$.ajax({
+  url:"http://localhost:8080/project/SQL?method=setTable&arg=Замовник&arg=id_Машини,Email&arg="+$.cookie('id_Mashunu')+",\""+$.cookie('email')+"\"",
+   async:false
+});
+}
+
+function getId_Zamobnuka(){
+var id='';
+$.ajax({
+  url:"http://localhost:8080/project/SQL?method=getTable&arg=id_Замовника&arg=Замовник&arg=id_Машини="+$.cookie('id_Mashunu')+" AND "+"Email=\""+$.cookie('email')+"\"",
+   async:false,
+  success: function(data) {
+    id=data[0].id_Замовника;
+  }
+});
+return id;
+}
+
+function getId_Zamovlenna(){
+var obj=JSON.parse($.cookie('form1'));
+var id='';
+$.ajax({
+  url:"http://localhost:8080/project/SQL?method=getTable&arg=id_Замовлення&arg=Замовлення&arg=id_Замовника="+id_Zamobnuka+" AND "+"id_фірми="+$.cookie('idFirm')+" AND "+"id_послуги="+obj[1].value+" AND "+"Дата_час=\""+obj[2].value+"\""+" AND "+"Опис=\""+$("#problem").val()+"\"",
+   async:false,
+  success: function(data) {
+    id=data[0].id_Замовлення;
+  }
+});
+return id;
+}
+
+
+function getEventTarget(e) {
+    e = e || window.event;
+    return e.target || e.srcElement; 
+}
+
+var l='';
+var ul = document.getElementById('list');
+ul.onclick = function(event) {alert('clic');
+    var target = getEventTarget(event);
+     l = target.innerHTML;
+    var url = "http://localhost:8080/project/SQL?method=getTable&arg=Марка&arg=Машина&arg=Марка LIKE \""+l+"%25\"";
+ $.get(url, function(data){
+markaHtml(data);
+markaListener();
+});
+} 
+
+function markaListener(){
+$("#marka").change(function(){
+alert('clic');
+if($(this).val()=='Далі'){
+var url = "http://localhost:8080/project/SQL?method=getTable&arg=Марка&arg=Машина&arg=Марка LIKE \""+l+"%25\"";
+ $.get(url, function(data){markaHtml(data);markaListener();});
+}else{
+var url="http://localhost:8080/project/SQL?method=getTable&arg=Модель&arg=Машина&arg=Марка=\""+$(this).val()+"\"";
+$.get(url, function(data){modelHtml(data);modelListener();});
+}
+});
+}
+
+function modelListener(){
+$("#model").change(function(){
+alert('clic');
+if($(this).val()=='Далі'){
+var url="http://localhost:8080/project/SQL?method=getTable&arg=Модель&arg=Машина&arg=Марка=\""+$("#marka").val()+"\"";
+$.get(url, function(data){modelHtml(data);modelListener();});
+}else{
+var url="http://localhost:8080/project/SQL?method=getTable&arg=Рік_випуску&arg=Машина&arg=Марка=\""+$("#marka").val()+"\""+" AND "+"Модель=\""+$("#model").val()+"\"";
+$.get(url, function(data){yearHtml(data);yearListener();});
+}
+
+});
+}
+
+function yearListener(){
+$("#year").change(function(){
+alert('clic');
+if($(this).val()=='Далі'){
+var url="http://localhost:8080/project/SQL?method=getTable&arg=Рік_випуску&arg=Машина&arg=Марка=\""+$("#marka").val()+"\""+" AND "+"Модель=\""+$("#model").val()+"\"";
+$.get(url, function(data){yearHtml(data);yearListener();});
+}else{
+var url="http://localhost:8080/project/SQL?method=getTable&arg=Обєм_двигуна&arg=Машина&arg=Марка=\""+$("#marka").val()+"\""+" AND "+"Модель=\""+$("#model").val()+"\""+" AND "+"Рік_випуску=\""+$("#year").val()+"\"";
+$.get(url, function(data){oborotuHtml(data);oborotuListener();});
+}
+
+});
+}
+
+function oborotuListener(){
+$("#oborotu").change(function(){
+alert('clic');
+if($(this).val()=='Далі'){
+var url="http://localhost:8080/project/SQL?method=getTable&arg=Обєм_двигуна&arg=Машина&arg=Марка=\""+$("#marka").val()+"\""+" AND "+"Модель=\""+$("#model").val()+"\""+" AND "+"Рік_випуску=\""+$("#year").val()+"\"";
+$.get(url, function(data){oborotuHtml(data);oborotuListener();});
+}else{
+var url="http://localhost:8080/project/SQL?method=getTable&arg=Тип_палива&arg=Машина&arg=Марка=\""+$("#marka").val()+"\""+" AND "+"Модель=\""+$("#model").val()+"\""+" AND "+"Рік_випуску=\""+$("#year").val()+"\""+" AND "+"Обєм_двигуна="+$("#oborotu").val();
+$.get(url, function(data){paluvoHtml(data);paluvoListener();});
+}
+
+});
+}
+
+function paluvoListener(){
+$("#paluvo").change(function(){
+alert('clic');
+if($(this).val()=='Далі'){
+var url="http://localhost:8080/project/SQL?method=getTable&arg=Тип_палива&arg=Машина&arg=Марка=\""+$("#marka").val()+"\""+" AND "+"Модель=\""+$("#model").val()+"\""+" AND "+"Рік_випуску=\""+$("#year").val()+"\""+" AND "+"Обєм_двигуна="+$("#oborotu").val();
+$.get(url, function(data){paluvoHtml(data);paluvoListener();});
+}
+});
+}
+
+$("#peredashi").change(function(){
+alert('clic');
+var url="http://localhost:8080/project/SQL?method=getTable&arg=id_Машини&arg=Машина&arg=Марка=\""+$("#marka").val()+"\""+" AND "+"Модель=\""+$("#model").val()+"\""+" AND "+"Рік_випуску=\""+$("#year").val()+"\""+" AND "+"Обєм_двигуна="+$("#oborotu").val()+" AND "+"Передачі=\""+$("#peredashi").val()+"\"";
+$.get(url, function(data){$.cookie('id_Mashunu',data[0].id_Машини);});
+});
+
+
+
+function markaHtml(data){
+var data2 = '<p>Виберіть Марку вашого автомобіля:</p>';
+data2+= '<select id=marka name=marka size="0">';
+jQuery.each(data, function(i, val) {
+data2+= "<option value="+val.Марка+">"+val.Марка+"</option>";
+});
+
+data2+="<option  value=Далі selected>Далі</option>";
+data2+='</select></p>';
+
+$("#divList").html(data2);
+}
+
+function modelHtml(data){
+var data2 = '';
+data2= '<select id=model name=model size="0">'
+jQuery.each(data, function(i, val) {
+data2+= "<option value="+val.Модель+">"+val.Модель+"</option>";
+});
+
+data2+="<option  value=Далі selected>Далі</option>";
+data2+='</select></p>';
+
+$("#divModel").html(data2);
+}
+
+function yearHtml(data){
+var data2 = '';
+data2= '<select id=year name=year size="0">'
+jQuery.each(data, function(i, val) {
+data2+= "<option value="+val.Рік_випуску+">"+val.Рік_випуску+"</option>";
+});
+
+data2+="<option  value=Далі selected>Далі</option>";
+data2+='</select></p>';
+
+$("#divYear").html(data2);
+}
+
+function oborotuHtml(data){
+var data2 = '';
+data2= '<select id=oborotu  name=oborotu  size="0">';
+jQuery.each(data, function(i, val) {
+data2+= "<option value="+val.Обєм_двигуна+">"+val.Обєм_двигуна+"</option>";
+});
+
+data2+="<option  value=Далі selected>Далі</option>";
+data2+='</select></p>';
+
+$("#divOborotu").html(data2);
+}
+
+function paluvoHtml(data){
+var data2 = '';
+data2= '<select id=paluvo  name=paluvo  size="0">';
+jQuery.each(data, function(i, val) {
+data2+= "<option value="+val.Тип_палива+">"+val.Тип_палива+"</option>";
+});
+
+data2+="<option  value=Далі selected>Далі</option>";
+data2+='</select></p>';
+
+$("#divPaluvo").html(data2);
+}
+
+});
+</script>
+<body>
+        <div id="particles-js"></div>
+        <script>
+            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+            particlesJS.load('particles-js', 'assets/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+            });   
+        </script>
+	<div id="page-wrap">
+	<header>
+		<a href="index.html" title="На головну" id="logo"><span class="contact">
+	</header>
+
+		<div class="clear"><br /></div>
+		<div class="cm-e-menu">
+            <ul>
+                <li class="topmenu">
+                    <a href="search.html">Відслідкувати</a>
+                    
+                <li class="topmenu">
+                    <a href="feedback.html">Зворотній зв'язок</a>
+                    
+                <li class="topmenu"><a href="about.html">Про нас</a></li>
+                <li class="topmenu">
+                    <a href="auth.html">Вхід</a>
+                    
+                <li class="topmenu">
+                    <a href="reg.html">Зареєструватись</a>
+        </div>
+		
+	<div id="wrapper">
+	
+		<div id="articles">
+			
+		<div id="letters">
+		Виберіть першу літеру назви вашого автомобіля:
+			<ul id="list" id='divList'>
+				<li><a href="#"><u>A</u></a></li>
+				<li><a href="#"><u>B</u></a></li>
+				<li><a href="#"><u>C</u></a></li>
+				<li><a href="#"><u>D</u></a></li>
+				<li><a href="#"><u>E</u></a></li>
+				<li><a href="#"><u>F</u></a></li>
+				<li><a href="#"><u>G</u></a></li>
+				<li><a href="#"><u>H</u></a></li>
+				<li><a href="#"><u>I</u></a></li>
+				<li><a href="#"><u>J</u></a></li>
+				<li><a href="#"><u>K</u></a></li>
+				<li><a href="#"><u>L</u></a></li>
+				<li><a href="#"><u>M</u></a></li>
+				<li><a href="#"><u>N</u></a></li>
+				<li><a href="#"><u>O</u></a></li>
+				<li><a href="#"><u>P</u></a></li>
+				<li><a href="#"><u>Q</u></a></li>
+				<li><a href="#"><u>R</u></a></li>
+				<li><a href="#"><u>S</u></a></li>
+				<li><a href="#"><u>T</u></a></li>
+				<li><a href="#"><u>U</u></a></li>
+				<li><a href="#"><u>V</u></a></li>
+				<li><a href="#"><u>W</u></a></li>
+				<li><a href="#"><u>X</u></a></li>
+				<li><a href="#"><u>Y</u></a></li>
+				<li><a href="#"><u>Z</u></a></li>
+			</ul>
+		</div>		
+	
+	<div id="dataorder">
+
+
+<p>Виберіть модель вашого автомобіля:</p>
+<div id='divModel'>
+
+<select id='model' size="0">
+<option value="Виберіть спочатку Марку">Виберіть спочатку Марку</option>
+</select><p/>
+
+</div>
+
+<p>Виберіть рік випуску:</p>
+<div id='divYear'>
+
+<select id='year' size="0">
+<option value="Виберіть спочатку Модель">Виберіть спочатку Модель</option>
+</select><p/>
+
+</div>
+
+<p>Виберіть обороти двигуна:</p> 
+<div id='divOborotu'>
+
+<select id='oborotu' size="0">
+<option value="Виберіть спочатку Рік Випуску">Виберіть спочатку Рік Випуску</option>
+</select><p/>
+
+</div>
+
+<p>Виберіть вид палива:</p>
+<div id='divPaluvo'>
+		  	<select id="paluvo" name=paluvo size="0">
+		    <option value="Виберіть спочатку Обороти">Виберіть спочатку Обороти</option>
+		   	</select>
+</div>
+
+		<p>Виберіть тип передач:</p>
+		 	<select id="peredashi" name="peredashi" size="0">
+		    <option selected disabled>Виберіть тип передач</option>
+		    <option value="Ручна">Ручна</option>
+		    <option  value="Автомат">Автомат</option>
+		    <option value="Інша">Інша</option>
+		   	</select>
+
+		
+
+		<p>Опишіть вашу проблему:</p> 
+  	<textarea id="problem" name=problem cols="40" rows="5"></textarea>  
+                
+    	</form>
+ <input id='button' type="submit" value="Замовити"></p>   
+
+	 			</div>
+ 		</div>
+	</div>
+	</div>
+	<footer>
+		<span class="left">Всі права захищені &copy; 2016</span>
+	</footer>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

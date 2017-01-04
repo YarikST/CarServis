@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content="sto, avto, fast remont" />
+	<meta name="description" content="Цей сайт являється тестовим" />
+
+	<link rel="stylesheet" type="text/css" href="C:\Users\Rudy\Desktop\www\css\style.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="C:\Users\Rudy\Desktop\www\img\favicon.ico" />
+	<title>Автомобілі, Автоновини, Автоогляди.</title>
+	<style>
+		@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	/*outline: none; /* Без обводки */
+}
+
+html {height: 100%}
+/* Menu */
+
+    @import url(http://fonts.googleapis.com/css?family=Roboto:300);
+    *{
+      margin: 0; padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    .cm-e-menu {
+        background-color: #ffffff; /* Колір рамки меню */
+        position: relative;
+        z-index: 1000;
+        color: #fff;
+        font-weight: 200;
+        box-shadow: 0 0 10px black;
+        }
+    .cm-e-menu ul {
+        margin: 0; padding: 0;
+    }
+    .cm-e-menu li {
+        position: relative;
+        white-space: nowrap;
+        cursor: pointer;
+        text-transform: capitalize !important;
+        list-style: none;
+
+        -webkit-transition: background-color ease-in 300ms;
+        -moz-transition: background-color ease-in 300ms;
+        -ms-transition: background-color ease-in 300ms;
+        -o-transition: background-color ease-in 300ms;
+        transition: background-color ease-in 300ms;
+    }
+    .cm-e-menu li:hover {
+        background-color: #5cbdaa; /* Колір при наведенні на елемент меню */
+        text-shadow: 0 10px 10px #222;
+    }
+    .cm-e-menu ul li.topmenu {
+        display: inline-table;
+        padding: .3em 1em;
+    }
+    .cm-e-menu .topmenu ul {
+        display:none;
+        position: absolute;
+        background-color: #222;
+    }
+    .cm-e-menu li:hover > ul {
+        display: table;
+    }
+    .cm-e-menu ul.submenu {
+        top: 100%; left: 0;
+        padding-top: .5em;
+        padding-bottom: .5em;	
+        box-shadow: 0 0 10px black;
+    }
+    .cm-e-menu ul.submenu .submenu {
+        top: -.5em; left: 100%;
+        font-size: 1em
+    }
+    .cm-e-menu ul.submenu li {
+        padding: .2em 1.5em;
+        font-size: .9rem;
+    }
+    .cm-e-menu li.divider {
+        padding: 0;
+        border-top: 1px solid #343434;
+        margin: .5rem auto .3rem;
+        cursor: default;
+    }
+    .cm-e-menu li.divider:hover {
+        background-color: transparent;
+    }
+    ul, li {
+
+    }
+
+/* Body */
+body {
+	background-color: #5cbdaa;
+	width: 100%;
+	height: 100%
+	color: #333;
+	font-size: 1em;
+	font-family: 'Roboto', Interstate;
+	line-height: 135%;
+}
+
+a {
+	color: #000000; /* Вказуємо колір посилання */
+	text-decoration: none;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+a:hover {
+	color: #ffffff; /* Вказуємо колір при наведенні на посилання */
+	text-decoration: none;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+a:active {color: #8ce4a6} /* Вказуємо колір при переходженні на посилання */
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+
+hr {
+	display: block;
+	border: 0;
+	height: 1px;
+	border-top: 1px solid #ccc;
+	padding: 0;
+}
+
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+
+/* Стилі для футера */
+
+    footer {
+        color: white;
+        padding: 1%;
+        /*border-top: 2px solid silver;*/
+        margin-top: 20px;
+        padding-bottom: 2%;
+                position: absolute;
+        bottom: 10px;
+    }
+
+footer img {width: 5%; float: left; margin-left: 5px;}
+
+#page-wrap:after {
+	content: "";
+	display: block;
+}
+
+footer, #page-wrap:after {height: 10px}
+
+#page-wrap {
+	min-height: 94%;
+	margin-bottom: -10px;
+}
+
+/* Стилі для зворотнього звязку */
+
+#subject {
+    padding: 3px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+}
+
+#email {
+    padding: 3px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+}
+
+#name {
+    padding: 3px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+}
+
+#message {
+    padding: 3px 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 1px 2px 2px 0;
+}
+
+#feedback {
+	margin-top: 25px;
+	margin-left: 100px;
+}
+
+#buttonSend {
+    background: -moz-linear-gradient(#D0ECF4, #5BC9E1, #D0ECF4);
+    background: -webkit-gradient(linear, 0 0, 0  100%, from(#D0ECF4), to(#D0ECF4), color-stop(0.5, #5BC9E1));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+    padding: 3px 7px;
+    color: #333;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+    /* Particles JS */
+
+        body, html{
+            padding: 0;
+            margin: 0;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+    }
+
+        #page-wrap {
+            position: relative;
+            z-index: 2;
+    }
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+        <div id="particles-js"></div>
+        <script>
+            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+            particlesJS.load('particles-js', 'assets/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+            });   
+        </script>
+	<div id="page-wrap">
+	<header>
+		<a href="index.html" title="На головну" id="logo"><span class="contact">
+	</header>
+
+		<div class="clear"><br /></div>
+		<div class="cm-e-menu">
+            <ul>
+                <li class="topmenu">
+                    <a href="search.html">Відслідкувати</a>
+                    
+                <li class="topmenu">
+                    <a href="feedback.html">Зворотній зв'язок</a>
+                    
+                <li class="topmenu"><a href="about.html">Про нас</a></li>
+                <li class="topmenu">
+                    <a href="auth.html">Вхід</a>
+                    
+                <li class="topmenu">
+                    <a href="reg.html">Зареєструватись</a>
+        </div>
+	<div id="wrapper">
+		<div id="articles">
+			<form action="" method="post">
+			<div id="feedback">	
+			<label for="subject">Тема повідомлення</label>
+				<p><input type="text" id="subject" name="subject" placeholder="Тема повідомлення" /></p>
+				<label for="email">Email</label>
+				<p><input type="email" id="email" name="email"placeholder="adress@example.com" /></p>
+				<p><label for="name">Введіть ваше ім'я</label></p>
+				<input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" />
+				<p><label for="message">Введіть ваше повідомлення</label></p>
+				<textarea placeholder="Введіть ваше повідомлення" id="message" name="message"></textarea>
+				<p><input id="buttonSend" type="submit" value="Відправити"></p>
+			</div>
+			</form>
+		</div>
+	</div>
+	</div>
+	<footer>
+		<span class="left">Всі права захищені &copy; 2016</span>
+	</footer>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

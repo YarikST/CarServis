@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Замовлення</element>
+    <element>id_фірми,id_замовника,id_послуги,Дата_час,id_відгука,Опис</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>3,3,3,"2011-08-05 20:09:00",3,"Опис1"</element>
+    </par>
+    <par>
+      <element>1,1,1,"2016-08-05 20:09:00",1,"Опис2"</element>
+    </par>
+    <par>
+      <element>2,2,2,"2014-08-05 20:09:00",2,"Опис3"</element>
+    </par>
+    <par>
+      <element>1,1,1,"2013-08-05 20:09:00",1,"Опис1"</element>
+    </par>
+    <par>
+      <element>2,2,2,"2012-08-05 20:09:00",2,"Опис1"</element>
+    </par>
+  </parameter>
+</root>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9y0bYufZbI6N_8DRGlZVvQAPCG0UZe9I">
+    </script>
+<style>
+  <style>
+
+     @font-face {
+    font-family: Prime Light; 
+    src: url(/web_public/fonts/Prime Light.otf); 
+   }
+   
+        @charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    /*outline: none; /* Без обводки */
+}
+
+html {height: 100%}
+
+    /* Menu */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+    *{
+      margin: 0; padding: 0;
+      font-family: 'Prime Light', sans-serif;
+    }
+    .cm-e-menu {
+        background-color: #ffffff; /* Колір рамки меню */
+        position: relative;
+        z-index: 1000;
+        color: #fff;
+        font-weight: 200;
+        box-shadow: 0 0 10px black;
+        }
+    .cm-e-menu ul {
+        margin: 0; padding: 0;
+    }
+    .cm-e-menu li {
+        position: relative;
+        white-space: nowrap;
+        cursor: pointer;
+        text-transform: capitalize !important;
+        list-style: none;
+
+        -webkit-transition: background-color ease-in 300ms;
+        -moz-transition: background-color ease-in 300ms;
+        -ms-transition: background-color ease-in 300ms;
+        -o-transition: background-color ease-in 300ms;
+        transition: background-color ease-in 300ms;
+    }
+    .cm-e-menu li:hover {
+        background-color: #5cbdaa; /* Колір при наведенні на елемент меню */
+        text-shadow: 0 10px 10px #222;
+    }
+    .cm-e-menu ul li.topmenu {
+        display: inline-table;
+        padding: .3em 1em;
+    }
+    .cm-e-menu .topmenu ul {
+        display:none;
+        position: absolute;
+        background-color: #222;
+    }
+    .cm-e-menu li:hover > ul {
+        display: table;
+    }
+    .cm-e-menu ul.submenu {
+        top: 100%; left: 0;
+        padding-top: .5em;
+        padding-bottom: .5em;   
+        box-shadow: 0 0 10px black;
+    }
+    .cm-e-menu ul.submenu .submenu {
+        top: -.5em; left: 100%;
+        font-size: 1em
+    }
+    .cm-e-menu ul.submenu li {
+        padding: .2em 1.5em;
+        font-size: .9rem;
+    }
+    .cm-e-menu li.divider {
+        padding: 0;
+        border-top: 1px solid #343434;
+        margin: .5rem auto .3rem;
+        cursor: default;
+    }
+    .cm-e-menu li.divider:hover {
+        background-color: transparent;
+    }
+    ul, li {
+
+    }
+
+    /* Body */
+
+body {
+    background-color: #5cbdaa;
+    width: 100%;
+    height: 100%
+    color: #333;
+    font-size: 1em;
+    font-family: 'Roboto', Interstate;
+    line-height: 135%;
+}
+
+a {
+    color: #000000; /* Вказуємо колір посилання */
+    text-decoration: none;
+    transition: all.6s ease;
+    -moz-transition: all.6s ease;
+    -webkit-transition: all.6s ease;
+    -ms-transition: all.6s ease;
+}
+
+a:hover {
+    color: #ffffff; /* Вказуємо колір при наведенні на посилання */
+    text-decoration: none;
+    transition: all.6s ease;
+    -moz-transition: all.6s ease;
+    -webkit-transition: all.6s ease;
+    -ms-transition: all.6s ease;
+}
+
+a:active {color: #8ce4a6} /* Вказуємо колір при переходженні на посилання */
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+hr {
+    display: block;
+    border: 0;
+    height: 1px;
+    border-top: 1px solid #ccc;
+    padding: 0;
+}
+
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+
+/* Footer Styles */
+
+footer {
+  color: white;
+  padding: 1%;
+  margin-top: 20px;
+  padding-bottom: 2%;
+  position: absolute;
+  bottom: 10px;
+  position: absolute;
+  bottom: 10px;
+}
+
+footer img {width: 5%; float: left; margin-left: 5px;}
+
+#page-wrap:after {
+    content: "";
+    display: block;
+}
+
+footer, #page-wrap:after {height: 10px}
+
+#page-wrap {
+    min-height: 94%;
+    margin-bottom: -10px;
+}
+
+#about_us {
+    margin-top: 25px;
+}
+    /* form starting stylings ------------------------------- */
+.group        { 
+  margin-top: 50px;
+  position:relative; 
+  margin-bottom:45px; 
+}
+input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus     { outline:none; }
+
+/* LABEL ======================================= */
+label          {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label     {
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar  { position:relative; display:block; width:300px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@keyframes inputHighlighter {
+  from  { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+
+
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* Buttons Styles */
+#wrapper  {
+  margin-left: 50px;
+}
+section#buttonConect button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    background: rgba(0,0,0,0);
+    border: solid 5px #ffffff;
+    }
+    section.border button:hover,
+    section.border button.hover {
+    border-color: #346392;
+    color: #346392;
+    }
+    section.border button:active,
+    section.border button.active {
+    border-color: #27496d;
+    color: #27496d;
+    }
+
+section#buttonConect button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    background: rgba(0,0,0,0);
+    border: solid 5px #ffffff;
+    }
+    section.border button:hover,
+    section.border button.hover {
+    border-color: #346392;
+    color: #346392;
+    }
+    section.border button:active,
+    section.border button.active {
+    border-color: #27496d;
+    color: #27496d;
+    }
+
+    section#buttonRobota button {
+    padding: 5px 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    background: rgba(0,0,0,0);
+    border: solid 5px #ffffff;
+    }
+    section.border button:hover,
+    section.border button.hover {
+    border-color: #346392;
+    color: #346392;
+    }
+    section.border button:active,
+    section.border button.active {
+    border-color: #27496d;
+    color: #27496d;
+    }
+
+#statusZamovlenna {
+
+  padding: 5px 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 1px 0;
+}
+
+    /* Particles JS */
+
+body, html{
+  padding: 0;
+  margin: 0;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#page-wrap {
+    position: relative;
+    z-index: 2;
+}
+</style>
+<script>
+<script>
+/**
+ * Cookie plugin
+ *
+ * Copyright (c) 2006 Klaus Hartl (stilbuero.de)
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ */
+
+/**
+ * Create a cookie with the given name and value and other optional parameters.
+ *
+ * @example $.cookie('the_cookie', 'the_value');
+ * @desc Set the value of a cookie.
+ * @example $.cookie('the_cookie', 'the_value', { expires: 7, path: '/', domain: 'jquery.com', secure: true });
+ * @desc Create a cookie with all available options.
+ * @example $.cookie('the_cookie', 'the_value');
+ * @desc Create a session cookie.
+ * @example $.cookie('the_cookie', null);
+ * @desc Delete a cookie by passing null as value. Keep in mind that you have to use the same path and domain
+ *       used when the cookie was set.
+ *
+ * @param String name The name of the cookie.
+ * @param String value The value of the cookie.
+ * @param Object options An object literal containing key/value pairs to provide optional cookie attributes.
+ * @option Number|Date expires Either an integer specifying the expiration date from now on in days or a Date object.
+ *                             If a negative value is specified (e.g. a date in the past), the cookie will be deleted.
+ *                             If set to null or omitted, the cookie will be a session cookie and will not be retained
+ *                             when the the browser exits.
+ * @option String path The value of the path atribute of the cookie (default: path of page that created the cookie).
+ * @option String domain The value of the domain attribute of the cookie (default: domain of page that created the cookie).
+ * @option Boolean secure If true, the secure attribute of the cookie will be set and the cookie transmission will
+ *                        require a secure protocol (like HTTPS).
+ * @type undefined
+ *
+ * @name $.cookie
+ * @cat Plugins/Cookie
+ * @author Klaus Hartl/klaus.hartl@stilbuero.de
+ */
+
+/**
+ * Get the value of a cookie with the given name.
+ *
+ * @example $.cookie('the_cookie');
+ * @desc Get the value of a cookie.
+ *
+ * @param String name The name of the cookie.
+ * @return The value of the cookie.
+ * @type String
+ *
+ * @name $.cookie
+ * @cat Plugins/Cookie
+ * @author Klaus Hartl/klaus.hartl@stilbuero.de
+ */
+jQuery.cookie = function(name, value, options) {
+    if (typeof value != 'undefined') { // name and value given, set cookie
+        options = options || {};
+        if (value === null) {
+            value = '';
+            options.expires = -1;
+        }
+        var expires = '';
+        if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+            var date;
+            if (typeof options.expires == 'number') {
+                date = new Date();
+                date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+            } else {
+                date = options.expires;
+            }
+            expires = '; expires=' + date.toUTCString(); // use expires attribute, max-age is not supported by IE
+        }
+        // CAUTION: Needed to parenthesize options.path and options.domain
+        // in the following expressions, otherwise they evaluate to undefined
+        // in the packed version for some reason...
+        var path = options.path ? '; path=' + (options.path) : '';
+        var domain = options.domain ? '; domain=' + (options.domain) : '';
+        var secure = options.secure ? '; secure' : '';
+        document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+    } else { // only name given, get cookie
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+};
+</script>
+
+<script>
+$(document).ready(function(){
+
+$("#buttonRemove").click(function(){
+$.ajax({
+  url:"http://localhost:8080/project/SQL?method=removeTable&arg=Список_Замовлень&arg=id_Замовлення="+$("#zamovlenna").val(),
+   async:true
+});
+
+});
+
+$("#statusZamovlenna").change(function(){
+
+$.ajax({
+  url:"http://localhost:8080/project/SQL?method=updateTable&arg=Список_Замовлень&arg=Статус&arg=\""+$("#statusZamovlenna").val()+"\""+"&arg=id_Замовлення="+$("#zamovlenna").val(),
+   async:true
+});
+
+});
+
+
+
+function Html(data){
+var data2='';
+data2= '<p><label>Оберіть Замовлення</label></p><select id="zamovlenna" name=zamovlenna size="0">';
+   jQuery.each(data, function(i, val) {
+data2+= "<option value="+val.id_Замовлення+">"+val.id_Замовлення+"</option>";
+});
+data2+="<option  value=Далі selected>Далі</option>";
+data2+='</select></p>';
+
+$("#obratuZamovlenna").html(data2);
+}
+
+
+function Listener(){
+$("#zamovlenna").change(function(){
+alert('clic');
+if($(this).val()=='Далі'){
+
+$.ajax({
+  url:"http://localhost:8080/project/SQL?method=getTable&arg=*&arg=Черга&arg=id_Фірми="+$("#id_Firmu").val(),
+   async:false,
+  success: function(data) {
+Html(data);
+Listener();
+  }
+});
+
+}else{
+$.ajax({
+  url:"http://localhost:8080/project/SQL?method=getTable&arg=*&arg=Замовлення&arg=id_Замовлення="+$("#zamovlenna").val(),
+   async:false,
+  success: function(data) {
+var obj = data[0];
+var data2='';
+
+data2+="Опис: "+obj.Опис+"</p>";
+data2+="Дата: "+obj.Дата_час+"</p>";
+
+$.ajax({
+  url:"http://localhost:8080/project/SQL?method=getTable&arg=Послуга&arg=Послуга&arg=id_Послуга="+obj.id_послуги,
+   async:false,
+  success: function(data) {
+data2+="Послуга:"+data[0].Послуга+"</p>";
+  }
+});
+
+$.ajax({
+  url:"http://localhost:8080/project/SQL?method=getTable&arg=Статус&arg=Список_Замовлень&arg=id_Замовлення="+$("#zamovlenna").val(),
+   async:false,
+  success: function(data) {
+data2+="Статус:"+data[0].Статус+"</p>";
+  }
+});
+
+$("#infZamovlenna").html(data2);
+  }
+});
+}
+
+});
+}
+
+$("#buttonConect").click(function(){
+
+$.ajax({
+  url:"http://localhost:8080/project/SQL?method=getTable&arg=*&arg=Черга&arg=id_Фірми="+$("#id_Firmu").val(),
+   async:false,
+  success: function(data) {
+Html(data);
+Listener();
+  }
+});
+
+});
+
+$("#buttonRobota").click(function(){
+
+
+$.ajax({
+  url:"http://localhost:8080/project/ServletRobintukZamovlenna?id_Furmu="+$("#id_Firmu").val()+"&id_Robitnuka="+$("#id_Robitnuka").val()+"&id_Zamovlenna="+$("#zamovlenna").val(),
+   async:false,
+  success: function(data) {
+alert(data);
+  }
+});
+
+});
+
+});
+</script>
+
+<body id='body'>
+
+<div class="cm-e-menu">
+            <ul>
+                <li class="topmenu">
+                    <a href="search.html">Відслідкувати</a>
+                    
+                <li class="topmenu">
+                    <a href="feedback.html">Зворотній зв'язок</a>
+                    
+                <li class="topmenu"><a href="about.html">Про нас</a></li>
+                <li class="topmenu">
+                    <a href="auth.html">Вхід</a>
+                    
+                <li class="topmenu">
+                    <a href="reg.html">Зареєструватись</a>
+        </div>
+<div id="wrapper">
+<div class="group" id="id_RobitnukaText">      
+    <input type="text" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Введіть ID id_Фірми</label>
+
+
+<div class="group" id="id_RobitnukaText">      
+    <input type="text" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Введіть ваш ID</label>
+<p><section id="buttonConect"><button>Зєднатися</button></section></p>
+
+<div id="obratuZamovlenna"></div>
+
+<div id="infZamovlenna"></div>	
+<p><section id="buttonRobota"><button>Взятися за роботу</button></section></p>
+
+
+			</div>
+			
+
+</body>
+</html>
+

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Робітник</element>
+    <element>ПІП,Освіта,id_Фірми</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>"Броварський М.М.","Середня",1</element>
+    </par>
+    <par>
+      <element>"Батько П.П.","Середня",1</element>
+    </par>
+    <par>
+      <element>"Галелюка А.А.","Середня",1</element>
+    </par>
+    <par>
+      <element>"Драган І.І.","Середня",1</element>
+    </par>
+    <par>
+      <element>"Грицай А.А.","Середня",1</element>
+    </par>
+    <par>
+      <element>"Герасевич М.М.","Середня",1</element>
+    </par>
+    <par>
+      <element>"Кончило Д.Д.","Середня",1</element>
+    </par>
+    <par>
+      <element>"Костик В.В.","Середня",1</element>
+    </par>
+    <par>
+      <element>"Паньків О.О.","Середня",1</element>
+    </par>
+    <par>
+      <element>"Лагуш О.О.","Середня",1</element>
+    </par>
+    <par>
+      <element>"Броварський М.М.","Середня",2</element>
+    </par>
+    <par>
+      <element>"Батько П.П.","Середня",2</element>
+    </par>
+    <par>
+      <element>"Галелюка А.А.","Середня",2</element>
+    </par>
+    <par>
+      <element>"Драган І.І.","Середня",2</element>
+    </par>
+    <par>
+      <element>"Грицай А.А.","Середня",2</element>
+    </par>
+    <par>
+      <element>"Герасевич М.М.","Середня",2</element>
+    </par>
+    <par>
+      <element>"Кончило Д.Д.","Середня",2</element>
+    </par>
+    <par>
+      <element>"Костик В.В.","Середня",2</element>
+    </par>
+    <par>
+      <element>"Паньків О.О.","Середня",2</element>
+    </par>
+    <par>
+      <element>"Лагуш О.О.","Середня",2</element>
+    </par>
+    <par>
+      <element>"Броварський М.М.","Середня",3</element>
+    </par>
+    <par>
+      <element>"Батько П.П.","Середня",3</element>
+    </par>
+    <par>
+      <element>"Галелюка А.А.","Середня",3</element>
+    </par>
+    <par>
+      <element>"Драган І.І.","Середня",3</element>
+    </par>
+    <par>
+      <element>"Грицай А.А.","Середня",3</element>
+    </par>
+    <par>
+      <element>"Герасевич М.М.","Середня",3</element>
+    </par>
+    <par>
+      <element>"Кончило Д.Д.","Середня",3</element>
+    </par>
+    <par>
+      <element>"Костик В.В.","Середня",3</element>
+    </par>
+    <par>
+      <element>"Паньків О.О.","Середня",3</element>
+    </par>
+    <par>
+      <element>"Лагуш О.О.","Середня",3</element>
+    </par>
+  </parameter>
+</root>

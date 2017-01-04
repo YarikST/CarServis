@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Послуга</element>
+    <element>Послуга, Ціна, Час_Роботи</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>"Послуга2",2.48,"7:15:00"</element>
+    </par>
+    <par>
+      <element>"Послуга1",25.2,"02:15:00"</element>
+    </par>
+  </parameter>
+</root>

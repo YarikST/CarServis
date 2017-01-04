@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content="sto, avto, fast remont" />
+	<meta name="description" content="Цей сайт являється тестовим" />
+
+	<link rel="stylesheet" type="text/css" href="C:\Users\Rudy\Desktop\www\css\style.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="C:\Users\Rudy\Desktop\www\img\favicon.ico" />
+	<title>Автомобілі, Автоновини, Автоогляди.</title>
+	<style>
+		@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	/*outline: none; /* Без обводки */
+}
+
+html {height: 100%}
+/* Menu */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+    *{
+      margin: 0; padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    .cm-e-menu {
+        background-color: #ffffff; /* Колір рамки меню */
+        position: relative;
+        z-index: 1000;
+        color: #fff;
+        font-weight: 200;
+        box-shadow: 0 0 10px black;
+        }
+    .cm-e-menu ul {
+        margin: 0; padding: 0;
+    }
+    .cm-e-menu li {
+        position: relative;
+        white-space: nowrap;
+        cursor: pointer;
+        text-transform: capitalize !important;
+        list-style: none;
+
+        -webkit-transition: background-color ease-in 300ms;
+        -moz-transition: background-color ease-in 300ms;
+        -ms-transition: background-color ease-in 300ms;
+        -o-transition: background-color ease-in 300ms;
+        transition: background-color ease-in 300ms;
+    }
+    .cm-e-menu li:hover {
+        background-color: #5cbdaa; /* Колір при наведенні на елемент меню */
+        text-shadow: 0 10px 10px #222;
+    }
+    .cm-e-menu ul li.topmenu {
+        display: inline-table;
+        padding: .3em 1em;
+    }
+    .cm-e-menu .topmenu ul {
+        display:none;
+        position: absolute;
+        background-color: #222;
+    }
+    .cm-e-menu li:hover > ul {
+        display: table;
+    }
+    .cm-e-menu ul.submenu {
+        top: 100%; left: 0;
+        padding-top: .5em;
+        padding-bottom: .5em;	
+        box-shadow: 0 0 10px black;
+    }
+    .cm-e-menu ul.submenu .submenu {
+        top: -.5em; left: 100%;
+        font-size: 1em
+    }
+    .cm-e-menu ul.submenu li {
+        padding: .2em 1.5em;
+        font-size: .9rem;
+    }
+    .cm-e-menu li.divider {
+        padding: 0;
+        border-top: 1px solid #343434;
+        margin: .5rem auto .3rem;
+        cursor: default;
+    }
+    .cm-e-menu li.divider:hover {
+        background-color: transparent;
+    }
+    ul, li {
+
+    }
+
+/* Body */
+body {
+	background-color: #5cbdaa;
+	width: 100%;
+	height: 100%
+	color: #333;
+	font-size: 1em;
+	font-family: 'Roboto', Interstate;
+	line-height: 135%;
+}
+
+a {
+	color: #000000; /* Вказуємо колір посилання */
+	text-decoration: none;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+a:hover {
+	color: #ffffff; /* Вказуємо колір при наведенні на посилання */
+	text-decoration: none;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+a:active {color: #8ce4a6} /* Вказуємо колір при переходженні на посилання */
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+
+hr {
+	display: block;
+	border: 0;
+	height: 1px;
+	border-top: 1px solid #ccc;
+	padding: 0;
+}
+
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+
+/* Стилі для футера */
+
+    footer {
+        color: white;
+        padding: 1%;
+        /*border-top: 2px solid silver;*/
+        margin-top: 20px;
+        padding-bottom: 2%;
+        position: absolute;
+        bottom: 10px;
+                position: absolute;
+        bottom: 10px;
+    }
+
+footer img {width: 5%; float: left; margin-left: 5px;}
+
+#page-wrap:after {
+	content: "";
+	display: block;
+}
+
+footer, #page-wrap:after {height: 10px}
+
+#page-wrap {
+	min-height: 94%;
+	margin-bottom: -10px;
+}
+
+#about_us {
+	margin-top: 25px;
+}
+
+    /* Particles JS */
+
+    body, html{
+        padding: 0;
+        margin: 0;
+    }
+
+    #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    #page-wrap {
+        position: relative;
+        z-index: 2;
+    }
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    
+</head>
+<body>
+        <div id="particles-js"></div>
+        <script>
+            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+            particlesJS.load('particles-js', 'assets/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+            });   
+        </script>
+	<div id="page-wrap">
+	<header>
+		<a href="index.html" title="На головну" id="logo"><span class="contact">
+	</header>
+
+		<div class="clear"><br /></div>
+		<div class="cm-e-menu">
+            <ul>
+                <li class="topmenu">
+                    <a href="search.html">Відслідкувати</a>
+                    
+                <li class="topmenu">
+                    <a href="feedback.html">Зворотній зв'язок</a>
+                    
+                <li class="topmenu"><a href="about.html">Про нас</a></li>
+                <li class="topmenu">
+                    <a href="auth.html">Вхід</a>
+                    
+                <li class="topmenu">
+                    <a href="reg.html">Зареєструватись</a>
+        </div>
+	<div id="wrapper">
+		<div id="articles">
+		
+		<div id="about_us">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+			
+		</div>
+	</div>
+	</div>
+	<footer>
+		<span class="left">Всі права захищені &copy; 2016</span>
+	</footer>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

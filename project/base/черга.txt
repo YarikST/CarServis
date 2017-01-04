@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Черга</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>id_Черги integer not null auto_increment,id_Фірми integer not null,id_Замовлення integer not null,primary key(id_Черги)</element>
+    </par>
+  </parameter>
+</root>

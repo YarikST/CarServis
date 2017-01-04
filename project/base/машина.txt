@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Машина</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>id_Машини integer not null auto_increment,Марка varchar(20) not null,Модель varchar(20) not null,Рік_випуску date not null,Обєм_двигуна float(2,1) not null,Тип_палива varchar(10) not null,Передачі varchar(10) not null,primary key(id_Машини)</element>
+    </par>
+  </parameter>
+</root>

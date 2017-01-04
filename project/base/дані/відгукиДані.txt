@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Відгуки</element>
+    <element>id_Фірми, id_Замовлення, Відгук</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>2,1,"Відгук4"</element>
+    </par>
+    <par>
+      <element>1,1,"Відгук1"</element>
+    </par>
+  </parameter>
+</root>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Робітник</element>
+    <element>ПІП,Освіта,id_Фірми</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>"ПІП3","ОСвіта3",2</element>
+    </par>
+    <par>
+      <element>"ПІП1","ОСвіта1",1</element>
+    </par>
+  </parameter>
+</root>

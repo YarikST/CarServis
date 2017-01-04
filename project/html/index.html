@@ -1,0 +1,492 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    
+<style>
+        @charset "utf-8";
+    * {
+        margin: 0;
+        padding: 0;
+        /* outline: none; Без обводки */
+    }
+
+    /* Menu */
+
+    @import url(http://fonts.googleapis.com/css?family=Roboto:300);
+    *{
+      margin: 0; padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    .cm-e-menu {
+        background-color: #ffffff; /* Колір рамки меню */
+        position: relative;
+        z-index: 1000;
+        color: #fff;
+        font-weight: 200;
+        box-shadow: 0 0 10px black;
+        }
+    .cm-e-menu ul {
+        margin: 0; padding: 0;
+    }
+    .cm-e-menu li {
+        position: relative;
+        white-space: nowrap;
+        cursor: pointer;
+        text-transform: capitalize !important;
+        list-style: none;
+
+        -webkit-transition: background-color ease-in 300ms;
+        -moz-transition: background-color ease-in 300ms;
+        -ms-transition: background-color ease-in 300ms;
+        -o-transition: background-color ease-in 300ms;
+        transition: background-color ease-in 300ms;
+    }
+    .cm-e-menu li:hover {
+        background-color: #5cbdaa; /* Колір при наведенні на елемент меню */
+        text-shadow: 0 10px 10px #222;
+    }
+    .cm-e-menu ul li.topmenu {
+        display: inline-table;
+        padding: .3em 1em;
+    }
+    .cm-e-menu .topmenu ul {
+        display:none;
+        position: absolute;
+        background-color: #222;
+    }
+    .cm-e-menu li:hover > ul {
+        display: table;
+    }
+    .cm-e-menu ul.submenu {
+        top: 100%; left: 0;
+        padding-top: .5em;
+        padding-bottom: .5em;	
+        box-shadow: 0 0 10px black;
+    }
+    .cm-e-menu ul.submenu .submenu {
+        top: -.5em; left: 100%;
+        font-size: 1em
+    }
+    .cm-e-menu ul.submenu li {
+        padding: .2em 1.5em;
+        font-size: .9rem;
+    }
+    .cm-e-menu li.divider {
+        padding: 0;
+        border-top: 1px solid #343434;
+        margin: .5rem auto .3rem;
+        cursor: default;
+    }
+    .cm-e-menu li.divider:hover {
+        background-color: transparent;
+    }
+    ul, li {
+
+    }
+
+    /* Body */
+
+    html {height: 100%}
+
+    body {
+        background-color: #5cbdaa;
+        width: 100%;
+        height: 100%
+        color: #333;
+        font-size: 1em;
+        font-family: 'Roboto', Interstate;
+        line-height: 135%;
+    }
+
+    a {
+        color: #000000; /* Вказуємо колір посилання */
+        text-decoration: none;
+        transition: all.6s ease;
+        -moz-transition: all.6s ease;
+        -webkit-transition: all.6s ease;
+        -ms-transition: all.6s ease;
+    }
+
+    a:hover {
+        color: #ffffff; /* Вказуємо колір при наведенні на посилання */
+        text-decoration: none;
+        transition: all.6s ease;
+        -moz-transition: all.6s ease;
+        -webkit-transition: all.6s ease;
+        -ms-transition: all.6s ease;
+    }
+
+    a:active {color: #8ce4a6} /* Вказуємо колір при переходженні на посилання */
+
+    img {
+        max-width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+
+    hr {
+        display: block;
+        border: 0;
+        height: 1px;
+        border-top: 1px solid #ccc;
+        padding: 0;
+    }
+
+    .left {float: left;}
+    .right {float: right;}
+    .clear {clear: both;}
+
+    /* Content */
+
+    #content{
+        opacity: .70;
+        margin-right: 30%;
+        margin-left: 30%;
+        margin-top: 25px;
+        width: 40%;
+        float: left;
+        min-height: 500px;
+        margin-bottom: 25px;
+    }
+
+    /* Sidebar */
+
+   /* #sidebar {
+        width: auto;
+        float: left;
+        min-height: 500px;
+    } */
+    
+    
+
+    /* Footer */
+
+    footer {
+        color: white;
+        padding: 1%;
+        /*border-top: 2px solid silver;*/
+        margin-top: 20px;
+        padding-bottom: 2%;
+    }
+    
+    
+
+    footer img {width: 5%; float: left; margin-left: 5px;}
+
+    #page-wrap:after {
+        content: "";
+        display: block;
+    }
+
+    footer, #page-wrap:after {height: 10px}
+
+    #page-wrap {
+        min-height: 94%;
+        margin-bottom: -10px;
+    }
+    
+    /* Particles JS */
+
+    body, html{
+        padding: 0;
+        margin: 0;
+    }
+
+    #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    #page-wrap {
+        position: relative;
+        z-index: 2;
+    }
+    
+</style>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9y0bYufZbI6N_8DRGlZVvQAPCG0UZe9I">
+    </script>
+
+<script>
+/**
+ * Cookie plugin
+ *
+ * Copyright (c) 2006 Klaus Hartl (stilbuero.de)
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ */
+
+/**
+ * Create a cookie with the given name and value and other optional parameters.
+ *
+ * @example $.cookie('the_cookie', 'the_value');
+ * @desc Set the value of a cookie.
+ * @example $.cookie('the_cookie', 'the_value', { expires: 7, path: '/', domain: 'jquery.com', secure: true });
+ * @desc Create a cookie with all available options.
+ * @example $.cookie('the_cookie', 'the_value');
+ * @desc Create a session cookie.
+ * @example $.cookie('the_cookie', null);
+ * @desc Delete a cookie by passing null as value. Keep in mind that you have to use the same path and domain
+ *       used when the cookie was set.
+ *
+ * @param String name The name of the cookie.
+ * @param String value The value of the cookie.
+ * @param Object options An object literal containing key/value pairs to provide optional cookie attributes.
+ * @option Number|Date expires Either an integer specifying the expiration date from now on in days or a Date object.
+ *                             If a negative value is specified (e.g. a date in the past), the cookie will be deleted.
+ *                             If set to null or omitted, the cookie will be a session cookie and will not be retained
+ *                             when the the browser exits.
+ * @option String path The value of the path atribute of the cookie (default: path of page that created the cookie).
+ * @option String domain The value of the domain attribute of the cookie (default: domain of page that created the cookie).
+ * @option Boolean secure If true, the secure attribute of the cookie will be set and the cookie transmission will
+ *                        require a secure protocol (like HTTPS).
+ * @type undefined
+ *
+ * @name $.cookie
+ * @cat Plugins/Cookie
+ * @author Klaus Hartl/klaus.hartl@stilbuero.de
+ */
+
+/**
+ * Get the value of a cookie with the given name.
+ *
+ * @example $.cookie('the_cookie');
+ * @desc Get the value of a cookie.
+ *
+ * @param String name The name of the cookie.
+ * @return The value of the cookie.
+ * @type String
+ *
+ * @name $.cookie
+ * @cat Plugins/Cookie
+ * @author Klaus Hartl/klaus.hartl@stilbuero.de
+ */
+jQuery.cookie = function(name, value, options) {
+    if (typeof value != 'undefined') { // name and value given, set cookie
+        options = options || {};
+        if (value === null) {
+            value = '';
+            options.expires = -1;
+        }
+        var expires = '';
+        if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+            var date;
+            if (typeof options.expires == 'number') {
+                date = new Date();
+                date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+            } else {
+                date = options.expires;
+            }
+            expires = '; expires=' + date.toUTCString(); // use expires attribute, max-age is not supported by IE
+        }
+        // CAUTION: Needed to parenthesize options.path and options.domain
+        // in the following expressions, otherwise they evaluate to undefined
+        // in the packed version for some reason...
+        var path = options.path ? '; path=' + (options.path) : '';
+        var domain = options.domain ? '; domain=' + (options.domain) : '';
+        var secure = options.secure ? '; secure' : '';
+        document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+    } else { // only name given, get cookie
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+};
+</script>
+
+<script>
+ var map;
+ var x=0;
+ var y=0;
+ var city='';
+ var cityPoshuk='';
+ var k=50;
+ var xy;
+
+$(document).ready(function(){
+navigator.geolocation.getCurrentPosition(success, error);
+
+$("#buttonPoshuk").click(function(){
+cityPoshuk= $("#textPoshuk").val();
+markerInit();
+});
+});
+
+  function success(position) {
+  x = position.coords.latitude;
+  y = position.coords.longitude;
+   xy=new google.maps.LatLng(x,y);
+   myMap();
+   autolocations();
+  }
+
+  function error() {
+  alert('Не вдалося отримати ваші координати.');
+  }
+
+ function init() {
+$('#textPoshuk').val(city)
+  }
+
+  function autolocations() {
+  /*По координатах знайти місто
+   */
+  $.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+x+","+y+"&key=AIzaSyA9y0bYufZbI6N_8DRGlZVvQAPCG0UZe9I&sensor=false&language=ru", function(data){
+var obj = data.results[0].address_components;
+jQuery.each(obj, function(i, val) {
+ var typeMas = val.types;
+if(typeMas[0]=='locality' & typeMas[1]=='political' ){city=val.short_name}
+
+}); init();
+    }
+    );
+  }
+
+    function markerInit() {//
+    /*по місту  знайти сто та поставити їх на карту*/
+ $.get("http://localhost:8080/project/SQL?method=getTable&arg=*&arg=Фірма&arg=Місто="+"\""+cityPoshuk+"\"", function(data){
+
+jQuery.each(data, function(i, val) {
+newMarker(new google.maps.LatLng(val.Х,val.У),val.Назва);
+});
+    }
+    );
+    myMap();//оновлення карти аби не було ігор
+  }
+
+
+ function newMarker(xy,title) {
+  var marker = new google.maps.Marker({
+  position:xy,
+  title:title,
+  animation:google.maps.Animation.BOUNCE
+  });
+
+  marker.setMap(map);
+
+ var infowindow = new google.maps.InfoWindow({
+    content: title
+  });
+  infowindow.open(map,marker);
+
+google.maps.event.addListener(marker,'click',function() {
+$.cookie('firmName',this.title);
+location.href = "zamovlenna1.html";
+    }
+    );
+
+  
+  }
+
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(x, y),
+    zoom: 12
+  }
+   map = new google.maps.Map(mapCanvas, mapOptions);
+
+var myCity = new google.maps.Circle({
+    center: xy,
+    radius: k,
+    strokeColor: "#0000FF",
+    strokeOpacity: 0.9,
+    strokeWeight: 2,
+    fillColor: "#0000FF",
+    fillOpacity: 0.2
+  });
+  myCity.setMap(map);
+
+google.maps.event.addListener(myCity,'click',function() {
+ alert(city);
+  });
+}
+</script>
+<body>
+    
+    <div id="particles-js"></div>
+        <script>
+            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+            particlesJS.load('particles-js', 'assets/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+            });   
+        </script>
+<div id="page-wrap">
+		<header>
+			<a href="index.html" title="На головну" id="logo"><span class="contact">	
+		</header>
+		<div class="clear"><br /></div>
+
+
+        <div class="cm-e-menu">
+            <ul>
+                <li class="topmenu">
+                    <a href="search.html">Відслідкувати</a>
+                    
+                <li class="topmenu">
+                    <a href="feedback.html">Зворотній зв'язок</a>
+                    
+                <li class="topmenu"><a href="about.html">Про нас</a></li>
+                <li class="topmenu">
+                    <a href="auth.html">Вхід</a>
+                    
+                <li class="topmenu">
+                    <a href="reg.html">Зареєструватись</a>
+        </div>
+
+
+		
+	<div id="wrapper">
+
+		<div id="content">
+		<div id="map" style="width:100%;height:500px"></div>
+<input id='textPoshuk' type="text"  value="" size = 15>
+<input id='buttonPoshuk' type="submit" value="Знайти"></p>
+		</div>
+
+		<div id="sidebar"></div>  
+  <button id="slideShowButton"></button> <!-- Optional button element. -->
+  <script src="slideShow.js"></script>
+        </div>
+
+		</div>
+		<div class="clear"></div>
+		<div id="main_soc_block">
+			
+		</div>
+	</div>
+	</div>
+	<footer>
+		<span class="left">Всі права захищені &copy; 2016
+            
+	</footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+
+    <script src="js/main.js" defer></script>
+    
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Автентифікація</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>id_автентифікації integer not null auto_increment,id_Машини integer not null,Email varchar(30) not null,Password varchar(32) not null,primary key(id_автентифікації)</element>
+    </par>
+  </parameter>
+</root>

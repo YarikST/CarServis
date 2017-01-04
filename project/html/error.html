@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9y0bYufZbI6N_8DRGlZVvQAPCG0UZe9I">
+    </script>
+
+<script>
+$(document).ready(function(){
+$("#button").click(function(){
+$.cookie('from2', $("#form").serialize());
+
+$.get("http://localhost:8080/project/Zamoblenna",
+{
+form1:$.cookie('form1'),
+form2:$.cookie('form1')
+}, function(data){
+location.href = "index.html";
+}
+);
+});
+var l='';
+var ul = document.getElementById('list');
+ul.onclick = function(event) {
+    var target = getEventTarget(event);
+     l = target.innerHTML;
+    
+ $.get("http://localhost:8080/project/SQL?method=getTable&arg=Марка&arg=Машина&arg=Марка LIKE \""+l+"%\"", markaHtml);
+alert("http://localhost:8080/project/SQL?method=getTable&arg=Марка&arg=Машина&arg=Марка LIKE \""+l+"%\"");
+} 
+ 
+$("#marka").onchange(function(){
+if($(this).val()=='Далі'){
+$.get("http://localhost:8080/project/SQL?method=getTable&arg=Марка&arg=Машина&arg=Марка LIKE\""+l+"%\"", markaHtml);
+}
+});
+
+$("#model").onchange(function(){
+if($(this).val()=='Далі'){
+$.get("http://localhost:8080/project/SQL?method=getTable&arg=Модель&arg=Машина&arg=Марка=\""+$("#marka").val()+"\"", modelHtml);
+}
+});
+
+function getEventTarget(e) {
+    e = e || window.event;
+    return e.target || e.srcElement; 
+}
+
+function markaHtml(data){
+var data = '';
+data= '<select id=marka size="0">';
+
+jQuery.each(data, function(i, val) {
+data+= "<option value="+val.Марка+">"+val.Марка+"</option>";
+});
+
+data+="<option value=next>Далі</option>";
+data+='</select></p>';
+
+$("#divList").html(data);
+}
+
+function modelHtml(data){
+var data = '';
+data= '<select id=model size="0">';
+
+jQuery.each(data, function(i, val) {
+data+= "<option value="+val.Модель+">"+val.Модель+"</option>";
+});
+
+data+="<option value=next>Далі</option>";
+data+='</select></p>';
+
+$("#model").html(data);
+}
+
+});
+</script>
+<body id='body'>
+error
+</body>
+</html>
+

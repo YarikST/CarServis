@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Машина</element>
+    <element>Марка,Модель,Рік_випуску,Обєм_двигуна,Тип_палива,Передачі</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>"Audi_3","A(8)","05.08.2006",2.8,"Бендзин","Ручна"</element>
+    </par>
+    <par>
+      <element>"Audi_1","A(7)","05.05.2005",2.6,"Бендзин","Автомат"</element>
+    </par>
+  </parameter>
+</root>

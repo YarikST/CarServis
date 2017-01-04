@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <constant>
+    <element>Історія</element>
+  </constant>
+  <parameter>
+    <par>
+      <element>id_Історії integer not null auto_increment,id_Автентифікації integer not null,id_Машини integer not null,primary key(id_Історії)</element>
+    </par>
+  </parameter>
+</root>
